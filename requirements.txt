@@ -1,0 +1,5 @@
+requests
+beautifulsoup4
+openai
+psycopg2-binary
+python-telegram-bot==20.3

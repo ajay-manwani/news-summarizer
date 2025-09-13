@@ -1,0 +1,17 @@
+[project]
+name = "python-news-summarizer"
+version = "0.1.0"
+description = "Multi-site news scraper and summarizer with email notifications"
+authors = ["Ajay Manwani <ajaymanwani07@gmail.com>"]
+requires-python = ">=3.12"
+dependencies = [
+    "requests",
+    "beautifulsoup4",
+    "openai",
+    "psycopg2-binary",
+    "python-telegram-bot==20.3",
+    "dotenv>=0.9.9",
+]
+
+[tool.uv]  # optional uv-specific settings
+# index-url = "https://pypi.org/simple"
