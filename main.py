@@ -14,13 +14,14 @@ def main():
             try:
                 article_text = scrape_page(url, site["content_selector"])
                 summary = summarize_text(article_text)
+                print(summary)
                 save_summary(site["name"], url, summary)
                 all_summaries.append(f"{site['name']} - {url}\n{summary}\n")
                 print(f"Saved summary for {url}")
             except Exception as e:
                 print(f"Error processing {url}: {e}")
 
-    if all_summaries:
+    if False:  # Change to True to enable notifications
         combined = "\n\n".join(all_summaries)
         send_email("Daily News Summaries", combined)
         send_telegram(combined)
